@@ -501,7 +501,8 @@ The default global options are:
   defaultTrigger: 'hover focus',
   // Default position offset (px)
   defaultOffset: 0,
-  // Default container where the tooltip will be appended
+  // Default container where the tooltip will be appended.
+  // Setting it is `false`, the tooltip will be set to the reference parent.
   defaultContainer: 'body',
   defaultBoundariesElement: undefined,
   defaultPopperOptions: {},
@@ -533,6 +534,8 @@ The default global options are:
     defaultDelay: 0,
     defaultTrigger: 'click',
     defaultOffset: 0,
+    // Default container where the tooltip will be appended.
+    // Setting it is `false`, the tooltip will be set to the reference parent.
     defaultContainer: 'body',
     defaultBoundariesElement: undefined,
     defaultPopperOptions: {},
