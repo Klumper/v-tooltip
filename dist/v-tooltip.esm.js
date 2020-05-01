@@ -4038,7 +4038,7 @@ function handleGlobalClose(event) {
     var popover = openPopovers[i];
 
     if (popover.$refs.popover) {
-      var contains = popover.$refs.popover.contains(event.target);
+      var contains = popover.$refs.popover.contains(event.composedPath()[0]);
       requestAnimationFrame(function () {
         if (event.closeAllPopover || event.closePopover && contains || popover.autoHide && !contains) {
           popover.$_handleGlobalClose(event, touch);

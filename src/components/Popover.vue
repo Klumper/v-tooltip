@@ -682,7 +682,7 @@ function handleGlobalClose (event, touch = false) {
   for (let i = 0; i < openPopovers.length; i++) {
     let popover = openPopovers[i]
     if (popover.$refs.popover) {
-      const contains = popover.$refs.popover.contains(event.target)
+      const contains = popover.$refs.popover.contains(event.composedPath()[0])
       requestAnimationFrame(() => {
         if (event.closeAllPopover || (event.closePopover && contains) || (popover.autoHide && !contains)) {
           popover.$_handleGlobalClose(event, touch)
